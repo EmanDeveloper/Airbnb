@@ -11,7 +11,7 @@ const PORT=process.env.PORT || 3000;
 dbconnection()
 .then(()=>{
     app.listen(PORT,()=>{
-        console.log(`App is listen at port ${PORT}`)
+        console.log(`😊App is listen at port ${PORT}`)
     })
 })
 .catch((err)=>{
