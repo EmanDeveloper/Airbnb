@@ -1,0 +1,117 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 4rem;
+    background-color: white;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222222 !important; 
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links , .f-info-social , .f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-info-social i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.f-info{
+    text-align: center;
+    height: 7rem;
+    display: flex;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* card */
+.list-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-text p{
+    font-weight: 400 !important;
+}
+
+.list-link{
+    text-decoration: none;
+}
+
+/* card effact */
+ .card-img-overlay{
+    opacity: 0;
+ }
+ .card-img-overlay:hover{
+    opacity: 0.3;
+    background: white;
+ }
+
+ /* add */
+ .add-btn{
+    background-color: #fe424d !important;
+    color: white !important;
+ }
+
+ /* edit */
+ .edit-btn{
+    background-color: #fe424d !important;
+    color: white !important;
+ }
+
+ /* show  */
+ .show-img{
+    height: 30vh;
+ }
+
+ .btns{
+    display: flex;
+ }
+ .air-bnb {
+    text-decoration: none; /* Start without underline */
+    position: relative; /* Allows pseudo-element to be positioned */
+  }
+  
+  .air-bnb::after {
+    content: ''; /* Create a pseudo-element */
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: #fe424d;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Start with no underline */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  .air-bnb:hover::after {
+    transform: scaleX(1); /* Full-width underline on hover */
+  }
+  

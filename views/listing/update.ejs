@@ -1,0 +1,50 @@
+<% layout("/layouts/biolerplate") -%>
+
+<div class="row">
+    <div class="col-8 offset-2">
+        <br>
+        <h1>Edit Your Listing</h1>
+    <form method="post" action="/list/<%= listfind._id%>/update?_method=put" class=" needs-validation" novalidate enctype="multipart/form-data">
+
+        <div class="mb-3">
+            <label for="title" class="form-lable">Title</label>
+            <input type="text" name="title" value="<%=listfind.title %>" class="form-control" required> 
+        </div>
+        
+        <div class="mb-3">
+            <label for="description" class="form-lable">Description</label>
+            <textarea name="description" class="form-control" required><%=listfind.description %></textarea>
+        </div>
+
+        <div class="mb-3">
+            <p>Original image</p>
+            <img src="<%= originalimage %>" alt="">
+        </div>
+        
+        <div class="mb-3">
+            <label for="image" class="form-lable">New Image </label>
+            <input type="file" name="image"  class="form-control" >
+        </div>
+        
+        <div class="mb-3">
+            <label for="price" class="form-lable">Price</label>
+            <input type="number" name="price" value="<%=listfind.price %>" class="form-control" required>
+        </div>
+       
+       <div class="mb-3">
+        <label for="location" class="form-lable">Location</label>
+        <input type="text" name="location" value="<%=listfind.location %>" class="form-control" required>
+       </div>
+        
+      <div class="mb-3">
+        <label for="country" class="form-lable">Country</label>
+        <input type="text" name="country" value="<%=listfind.country %>" class="form-control" required>
+      </div>
+        
+        <button class="btn mb-3 edit-btn">Edit</button>
+    </form>
+
+
+    </div>
+</div>
+    
